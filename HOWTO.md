@@ -6,7 +6,7 @@ First login to your Pi and set it up with a .local name, see: [assigning a .loca
 
 Make sure packages are installed:
 
-`sudo apt-get update && sudo apt-get -y install git screen python python-pycurl wget sdcc python-serial`
+`sudo apt-get update && sudo apt-get -y install git screen python python-pycurl wget sdcc python-serial libusb-1.0-0`
 
 Download the usb wixel python code:
 

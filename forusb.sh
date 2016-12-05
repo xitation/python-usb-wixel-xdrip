@@ -31,7 +31,7 @@ then
 echo
 echo "Installing recommended packages"
 echo
-sudo apt-get update && sudo apt-get -y install git screen python python-pycurl wget sdcc python-serial
+sudo apt-get update && sudo apt-get -y install git screen python python-pycurl wget sdcc python-serial libusb-1.0-0-dev libusb-1.0-0
 echo
 echo
 
