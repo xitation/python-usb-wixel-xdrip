@@ -151,10 +151,10 @@ fi
 echo
 sleep 3
 
-#echo "Trying to start process.."
-#/usr/bin/screen -dmS wixel python "$pw/python-usb-wixel.py"
-#echo
-#screen -r wixel
+echo "Trying to start process.."
+/usr/bin/screen -dmS wixel python "$pw/python-usb-wixel.py"
+echo
+screen -r wixel
 
 else
 echo "Not installing.."
