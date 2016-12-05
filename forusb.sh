@@ -31,7 +31,7 @@ then
 echo
 echo "Installing recommended packages"
 echo
-sudo apt-get update && sudo apt-get -y install git screen python python-pycurl wget sdcc
+sudo apt-get update && sudo apt-get -y install git screen python python-pycurl wget sdcc python-serial
 echo
 echo
 
