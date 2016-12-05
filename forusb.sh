@@ -54,16 +54,30 @@ git clone https://github.com/jamorham/wixel-xDrip
 echo
 fi
 
+read -p "Select Y to build for RPi, Select N to build for x86_64 y/n : " y
+if [ "$y" = "Y" ] || [ "$y" = "y" ]
+then
+
 if [ ! -d wixel_linux ]
 then
-echo "Downloading wixel linux tools"
+echo "Downloading wixel RPi linux tools"
 rm -f wixel-arm-linux-gnueabihf-150527.tar.gz
 wget https://www.pololu.com/file/0J872/wixel-arm-linux-gnueabihf-150527.tar.gz
 tar -xzvf wixel-arm-linux-gnueabihf-150527.tar.gz
 fi
 
-cd wixel-xDrip
+else
+if [ ! -d wixel_linux ]
+then
+echo "Downloading wixel x86_64 linux tools"
+rm -f wixel-linux-110623-amd64.tar.gz
+wget https://www.pololu.com/file/0J490/wixel-linux-110623-amd64.tar.gz
+tar -xzvf wixel-linux-110623-amd64.tar.gz
+fi
 
+fi
+
+cd wixel-xDrip
 
 echo "Configuring source code for USB use"
 echo
@@ -137,10 +151,10 @@ fi
 echo
 sleep 3
 
-echo "Trying to start process.."
-/usr/bin/screen -dmS wixel python "$pw/python-usb-wixel.py"
-echo
-screen -r wixel
+#echo "Trying to start process.."
+#/usr/bin/screen -dmS wixel python "$pw/python-usb-wixel.py"
+#echo
+#screen -r wixel
 
 else
 echo "Not installing.."
