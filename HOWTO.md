@@ -14,7 +14,9 @@ Download the usb wixel python code:
 
 `cd python-usb-wixel-xdrip`
 
-Run the auto-installer:
+On Debian based linux distro's if you wish to run as non-root, add your user to the "dialout" group to grant rights to the USB serial device.
+
+Run the auto-installer as the user you with to run as "non-root":
 
 `sh forusb.sh`
 
